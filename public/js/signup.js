@@ -3,6 +3,11 @@ $(document).ready(function() {
   var signUpForm = $("form.signup");
   var emailInput = $("input#email-input");
   var passwordInput = $("input#password-input");
+  var firstname = $("input#first_name");
+  var lastname = $("input#last_name");
+  var gradyear = $("input#grad-year");
+  var username = $("input#username");
+
 
   // When the signup button is clicked, we validate the email and password are not blank
   signUpForm.on("submit", function(event) {
@@ -25,8 +30,14 @@ $(document).ready(function() {
   // Otherwise we log any errors
   function signUpUser(email, password) {
     $.post("/api/signup", {
-      email: email,
-      password: password
+      firstname: firstname,
+      lastname: lastname,
+      email: emailInput,
+      password: password,
+      username: username,
+      gradyear: gradyear,
+      profilepic: profilepic,
+      githuburl: githuburl,
     })
       .then(function(data) {
         window.location.replace("/members");
