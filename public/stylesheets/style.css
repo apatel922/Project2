@@ -2,3 +2,57 @@ form.signup,
 form.login {
   margin-top: 50px;
 }
+.card .card-title,
+h5 {
+  color: #ee6e72bf;
+  font-weight: 500;
+  padding-bottom: none;
+}
+.class-year {
+  color: #ababab;
+  font-weight: 500;
+  /* float: right; */
+  font-size: 18px;
+}
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating){
+  color: #ee6e72bf;
+}
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating):hover {
+  color: #ee6e72;
+}
+.btn-flat {
+  color: #ee6e72;
+}
+.btn-floating {
+  background-color: #ee6e72bf;
+}
+.btn-floating:hover {
+  background-color: #ee6e72;
+}
+.modal {
+  height: 80%;
+  width: 600px;
+}
+.modal-content {
+  height: 100%;
+}
+.modal-image {
+  display: block;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.modal .modal-footer {
+  background-color: #ee6e721b;
+}
+
+
+/* 720px Breakpoint */
+@media only screen and (max-width: 720px) {
+  .modal {
+    width: 90%;
+  }
+  .hideAtBreak {
+    visibility: hidden;
+  }
+}
