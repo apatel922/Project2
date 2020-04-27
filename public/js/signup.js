@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
   // Getting references to our form and input
   var signUpForm = $("form#signup");
   var emailInput = $("input#email-input");
@@ -7,10 +7,10 @@ $(document).ready(function() {
   var lastname = $("input#last_name");
   var gradyear = $("input#grad-year");
   var username = $("input#username");
-
+  var axios = require("axios");
 
   // When the signup button is clicked, we validate the email and password are not blank
-  signUpForm.on("submit", function(event) {
+  signUpForm.on("submit", function (event) {
     event.preventDefault();
     var userData = {
       email: emailInput.val().trim(),
@@ -23,10 +23,17 @@ $(document).ready(function() {
       gitHubUrl: "",
     };
 
-    //AXIOS call will go here-ish
     if (!userData.email || !userData.password) {
       return;
     }
+
+    var axiosURL = `https://api.github.com/users/${username}?`;
+    axios.get(axiosURL)
+      .then((res) => {
+        userData.profilePic = res.data.avatar_url;
+        userData.gitHubUrl = res.data.html_url;
+      });
+
     // If we have an email and password, run the signUpUser function
     signUpUser(userData);
     emailInput.val("");
@@ -52,7 +59,7 @@ $(document).ready(function() {
       profilepic: userData.profilePic,
       githuburl: userData.gitHubUrl,
     })
-      .then(function(data) {
+      .then(function (data) {
         window.location.replace("/members");
         // If there's an error, handle it by throwing up a bootstrap alert
       })
