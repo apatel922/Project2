@@ -13,16 +13,22 @@
 
 <body>
 
+  <!-- Navbar -->
   <nav>
     <div class="nav-wrapper">
-      <a href="#" class="brand-logo">nerd <span class="brand-logo second">book</span></a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="sass.html">Sass</a></li>
-        <li><a href="badges.html">Components</a></li>
-        <li><a href="collapsible.html">JavaScript</a></li>
+      <a href="#!" class="brand-logo">nerd book</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">more_vert</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="members.html">Members</a></li>
+        <li><a href="signup.html">Sign Up</a></li>
       </ul>
     </div>
   </nav>
+  <!-- Sidenav -->
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="members.html">Members</a></li>
+    <li><a href="signup.html">Sign Up</a></li>
+  </ul>
 
   <div class="container">
     <div class="row">
@@ -98,10 +104,15 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script type="text/javascript" src="js/members.js"></script>
   
-  <!-- Modal logic -->
   <script>
+    // Modal Logic
     $(document).ready(function(){
       $('.modal').modal();
+    });
+
+    // Sidenav
+    $(document).ready(function(){
+      $('.sidenav').sidenav();
     });
   </script>
 
