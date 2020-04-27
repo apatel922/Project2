@@ -45,6 +45,12 @@ h5 {
 .modal .modal-footer {
   background-color: #ee6e721b;
 }
+nav .brand-logo {
+  padding-left: 24px;
+}
+nav .second {
+  color: #eda9ab;
+}
 
 
 /* 720px Breakpoint */
