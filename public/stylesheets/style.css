@@ -60,6 +60,14 @@ nav .brand-logo:active {
   text-decoration: none;
   background-color: #ed7d81;
 }
+nav ul a {
+  color: #ffe2e3;
+}
+nav ul a:hover {
+  color: #ffe2e3;
+  text-decoration: none;
+  background-color: #ed7d81;
+}
 
 
 /* 720px Breakpoint */
