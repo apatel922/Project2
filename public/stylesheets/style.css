@@ -47,9 +47,18 @@ h5 {
 }
 nav .brand-logo {
   padding-left: 24px;
+  padding-right: 24px;
+  color: #ffe2e3;
 }
-#secondLogo {
-  color: #ffc6c8;
+nav .brand-logo:hover {
+  color: #ffe2e3;
+  text-decoration: none;
+  background-color: #ed7d81;
+}
+nav .brand-logo:active {
+  color: #ffe2e3;
+  text-decoration: none;
+  background-color: #ed7d81;
 }
 
 
@@ -58,7 +67,11 @@ nav .brand-logo {
   .modal {
     width: 90%;
   }
-  .hideAtBreak {
-    visibility: hidden;
+  nav .brand-logo {
+    padding-left: none;
+    padding-right: none;
   }
+  /* .hideAtBreak {
+    visibility: hidden;
+  } */
 }
