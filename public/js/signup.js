@@ -14,7 +14,7 @@ $(document).ready(function() {
     event.preventDefault();
     
     console.log(username);
-    axios.get(`https://api.github.com/users/${username}`)
+    /*axios.get(`https://api.github.com/users/${username}`)
     .then(data => {
       // Github ProfilePic URL
       const profilePic = data.data.avatar_url
@@ -32,7 +32,7 @@ $(document).ready(function() {
       gitHubUrl: url
     };
     console.log(userData);
-  });
+  });*/
 
     //AXIOS call will go here-ish
     if (!userData.email || !userData.password) {
