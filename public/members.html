@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Passport Authentication</title>
+  <title>Our Team</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
@@ -13,16 +13,30 @@
 
 <body>
 
-
-  <nav class="nav-wrapper">
-    <div class="brand-logo center">
+  <!-- Navbar -->
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo">nerd book</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">more_vert</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="members.html">Members</a></li>
+        <li><a href="signup.html">Sign Up</a></li>
+        <li><a href="login.html">Log Out</a></li>
+      </ul>
     </div>
   </nav>
+  <!-- Sidenav -->
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="members.html">Members</a></li>
+    <li><a href="signup.html">Sign Up</a></li>
+    <li><a href="login.html">Log Out</a></li>
+  </ul>
+
   <div class="container">
     <div class="row">
       <!-- Page header -->
       <div class="row">
-        <h3>Members</h3>
+        <h3>Our Team</h3>
       </div>
       <!-- Card grid -->
       <div class="row">
@@ -92,10 +106,15 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script type="text/javascript" src="js/members.js"></script>
   
-  <!-- Modal logic -->
   <script>
+    // Modal Logic
     $(document).ready(function(){
       $('.modal').modal();
+    });
+
+    // Sidenav
+    $(document).ready(function(){
+      $('.sidenav').sidenav();
     });
   </script>
 
