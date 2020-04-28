@@ -1,8 +1,8 @@
-$(document).ready(function() {
+$(document).ready(function () {
   var signUpForm = $("#signup");
   // Getting references to our form and input
   // When the signup button is clicked, we validate the email and password are not blank
-  signUpForm.on("click", function(event) {
+  signUpForm.on("click", function (event) {
 
     var emailInput = $("input#email-input");
     var passwordInput = $("input#password-input");
@@ -12,7 +12,6 @@ $(document).ready(function() {
     var username = $("#github").val().trim();
 
     event.preventDefault();
-    
     console.log(username);
     /*axios.get(`https://api.github.com/users/${username}`)
     .then(data => {
@@ -20,7 +19,6 @@ $(document).ready(function() {
       const profilePic = data.data.avatar_url
       //Github Email Address
       const url = data.data.html_url
-    
       var userData = {
       email: emailInput.val().trim(),
       password: passwordInput.val().trim(),
@@ -63,7 +61,7 @@ $(document).ready(function() {
       profilepic: userData.profilePic,
       githuburl: userData.gitHubUrl,
     })
-      .then(function(data) {
+      .then(function (data) {
         window.location.replace("/login");
         // If there's an error, handle it by throwing up a bootstrap alert
       })
