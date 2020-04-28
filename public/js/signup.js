@@ -12,7 +12,7 @@ $(document).ready(function() {
     var username = $("#github").val().trim();
 
     event.preventDefault();
-    let userData = {}; 
+    
     console.log(username);
     axios.get(`https://api.github.com/users/${username}`)
     .then(data => {
@@ -21,7 +21,7 @@ $(document).ready(function() {
       //Github Email Address
       const url = data.data.html_url
     
-      userData = {
+      var userData = {
       email: emailInput.val().trim(),
       password: passwordInput.val().trim(),
       firstName: firstname.val().trim(),
