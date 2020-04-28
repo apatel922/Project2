@@ -45,6 +45,29 @@ h5 {
 .modal .modal-footer {
   background-color: #ee6e721b;
 }
+nav .brand-logo {
+  padding-left: 24px;
+  padding-right: 24px;
+  color: #ffe2e3;
+}
+nav .brand-logo:hover {
+  color: #ffe2e3;
+  text-decoration: none;
+  background-color: #ed7d81;
+}
+nav .brand-logo:active {
+  color: #ffe2e3;
+  text-decoration: none;
+  background-color: #ed7d81;
+}
+nav ul a {
+  color: #ffe2e3;
+}
+nav ul a:hover {
+  color: #ffe2e3;
+  text-decoration: none;
+  background-color: #ed7d81;
+}
 
 
 /* 720px Breakpoint */
@@ -52,7 +75,11 @@ h5 {
   .modal {
     width: 90%;
   }
-  .hideAtBreak {
-    visibility: hidden;
+  nav .brand-logo {
+    padding-left: none;
+    padding-right: none;
   }
+  /* .hideAtBreak {
+    visibility: hidden;
+  } */
 }
