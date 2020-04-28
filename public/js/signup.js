@@ -1,34 +1,43 @@
-$(document).ready(function() {
+$(document).ready(function () {
+  var signUpForm = $("#signup");
   // Getting references to our form and input
-  var signUpForm = $("form#signup");
-  var emailInput = $("input#email-input");
-  var passwordInput = $("input#password-input");
-  var firstname = $("input#first_name");
-  var lastname = $("input#last_name");
-  var gradyear = $("input#grad-year");
-  var username = $("input#username");
-
-
   // When the signup button is clicked, we validate the email and password are not blank
-  signUpForm.on("submit", function(event) {
+  signUpForm.on("click", function (event) {
+
+    var emailInput = $("input#email-input");
+    var passwordInput = $("input#password-input");
+    var firstname = $("input#first_name");
+    var lastname = $("input#last_name");
+    var gradyear = $("input#grad-year");
+    var username = $("#github").val().trim();
+
     event.preventDefault();
-    var userData = {
+    console.log(username);
+    /*axios.get(`https://api.github.com/users/${username}`)
+    .then(data => {
+      // Github ProfilePic URL
+      const profilePic = data.data.avatar_url
+      //Github Email Address
+      const url = data.data.html_url
+      var userData = {
       email: emailInput.val().trim(),
       password: passwordInput.val().trim(),
       firstName: firstname.val().trim(),
       lastName: lastname.val().trim(),
       gradYear: gradyear.val().trim(),
-      userName: username.val().trim(),
-      profilePic: "",
-      gitHubUrl: "",
+      userName: username,
+      profilePic: profilePic,
+      gitHubUrl: url
     };
+    console.log(userData);
+  });*/
 
     //AXIOS call will go here-ish
     if (!userData.email || !userData.password) {
       return;
     }
     // If we have an email and password, run the signUpUser function
-    signUpUser(userData);
+    //signUpUser(userData);
     emailInput.val("");
     passwordInput.val("");
     firstname.val("");
@@ -52,8 +61,8 @@ $(document).ready(function() {
       profilepic: userData.profilePic,
       githuburl: userData.gitHubUrl,
     })
-      .then(function(data) {
-        window.location.replace("/members");
+      .then(function (data) {
+        window.location.replace("/login");
         // If there's an error, handle it by throwing up a bootstrap alert
       })
       .catch(handleLoginErr);
