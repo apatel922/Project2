@@ -7,7 +7,6 @@ $(document).ready(function () {
   var lastname = $("input#last_name");
   var gradyear = $("input#grad-year");
   var username = $("input#username");
-  var axios = require("axios");
 
   // When the signup button is clicked, we validate the email and password are not blank
   signUpForm.on("submit", function (event) {
@@ -25,25 +24,30 @@ $(document).ready(function () {
 
     if (!userData.email || !userData.password) {
       return;
-    }
+    };
 
-    var axiosURL = `https://api.github.com/users/${username}?`;
-    axios.get(axiosURL)
-      .then((res) => {
+    $.ajax({
+      type: "GET",
+      url: `https://api.github.com/users/${userData.userName}?client_id=${process.env.CLIENT_ID}&client_secret=${process.env.CLIENT_SECRET}`,
+      async: true,
+      dataType: "json",
+      success: function (res) {
         userData.profilePic = res.data.avatar_url;
         userData.gitHubUrl = res.data.html_url;
-      });
 
-    // If we have an email and password, run the signUpUser function
-    signUpUser(userData);
-    emailInput.val("");
-    passwordInput.val("");
-    firstname.val("");
-    lastname.val("");
-    gradyear.val("");
-    username.val("");
-    profilePic.val("");
-    gitHubUrl.val("");
+        console.log(res);
+
+        signUpUser(userData);
+        
+        // emailInput.val("");
+        // passwordInput.val("");
+        // firstname.val("");
+        // lastname.val("");
+        // gradyear.val("");
+        // username.val("");
+        // profilePic.val("");
+        // gitHubUrl.val("");    
+      }
   });
 
   // Does a post to the signup route. If successful, we are redirected to the members page
@@ -70,4 +74,5 @@ $(document).ready(function () {
     $("#alert .msg").text(err.responseJSON);
     $("#alert").fadeIn(500);
   }
+});
 });
