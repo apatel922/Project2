@@ -15,7 +15,7 @@ module.exports = function (app) {
   // how we configured our Sequelize User Model. If the user is created successfully, proceed to log the user in,
   // otherwise send back an error
   app.post("/api/signup", function (req, res) {
-    axios.get(`https://api.github.com/users/${req.body.username}`)
+    axios.get("https://api.github.com/users/" + req.body.username)
       .then(function (searchRes) {
         db.User.create({
           firstname: req.body.firstname,
