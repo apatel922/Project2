@@ -1,6 +1,7 @@
 // Requiring our models and passport as we've configured it
 var db = require("../models");
 var passport = require("../config/passport");
+var axios = require("axios")
 
 module.exports = function (app) {
   // Using the passport.authenticate middleware with our local strategy.
@@ -14,15 +15,24 @@ module.exports = function (app) {
   // how we configured our Sequelize User Model. If the user is created successfully, proceed to log the user in,
   // otherwise send back an error
   app.post("/api/signup", function (req, res) {
-    req.body.gradyear = parseInt(req.body.gradyear);
-    console.log(req.body);
-    db.User.create(req.body)
-      .then(function () {
-        res.redirect(307, "/api/login");
-      })
-      .catch(function (err) {
-        console.log(err);
-        res.status(401).json(err);
+    axios.get(`https://api.github.com/users/${req.body.username}`)
+      .then(function (searchRes) {
+        db.User.create({
+          firstname: req.body.firstname,
+          lastname: req.body.lastname,
+          username: req.body.username,
+          gradyear: parseInt(req.body.gradyear),
+          profilepic: searchRes.data.avatar_url,
+          githuburl: searchRes.data.html_url,
+          email: req.body.email,
+          password: req.body.password,
+        })
+          .then(function () {
+            res.redirect(307, "/api/login");
+          })
+          .catch(function (err) {
+            res.status(401).json(err);
+          });
       });
   });
 
