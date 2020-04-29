@@ -6,7 +6,6 @@ $(document).ready(function () {
     $.post("/api/signup", userData)
 
       .then(function () {
-    
         window.location.replace("/login");
         // If there's an error, handle it by throwing up a bootstrap alert
       })
@@ -28,7 +27,6 @@ $(document).ready(function () {
     if (!userData.email || !userData.password) {
       return;
     }
-  
     signUpUser(userData);
   });
 
