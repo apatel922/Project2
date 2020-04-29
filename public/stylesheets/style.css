@@ -29,6 +29,28 @@ h5 {
 .btn-floating:hover {
   background-color: #ee6e72;
 }
+.divider {
+  display: block;
+  background-color: #dedede;
+}
+#jumbotron {
+  margin-top: 60px;
+  display: block;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  height: 320px;
+}
+.jumboHeader {
+  font-size: 48px;
+  color: #ee6e72a3;
+  padding-left: 32px;
+  margin-bottom: -10px;
+}
+.jumboContent {
+  padding: 24px;
+  font-size: 18px;
+  color: #9a9a9a;
+}
 .modal {
   height: 80%;
   width: 600px;
