@@ -20,8 +20,6 @@ $(document).ready(function () {
       //var email = members[i].email;
       //var userName = members[i].username;
 
-      
-
       //welcome header
       var name = $("<h2>").text("Welcome, " + members[members.length - 1].firstname);
       $(name).addClass("member-header");

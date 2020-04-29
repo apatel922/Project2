@@ -15,7 +15,7 @@ module.exports = function (app) {
   // otherwise send back an error
   app.post("/api/signup", function (req, res) {
     req.body.gradyear = parseInt(req.body.gradyear);
-    console.log(req.body)
+    console.log(req.body);
     db.User.create(req.body)
       .then(function () {
         res.redirect(307, "/api/login");
