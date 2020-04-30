@@ -23,7 +23,6 @@ $(document).ready(function () {
       var first = results[i].firstname;
       var last = results[i].lastname;
       var gradYear = results[i].gradyear;
-      var bio = "test test test";
       var pic = $("<img>");
       pic.attr("src", "placeholder.jpg");
       //var email = results[i].email;
@@ -62,10 +61,6 @@ $(document).ready(function () {
       var year = $("<span>").text(gradYear);
       year.addClass("class-year");
       text1.append(year);
-
-      var text2 = $("<p>").text(bio);
-      text2.attr("id", "text2");
-      div3.append(text2);
 
 
       div2.append(imgdiv);
