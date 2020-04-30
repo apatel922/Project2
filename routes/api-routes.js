@@ -58,7 +58,7 @@ module.exports = function (app) {
         res.json(results);
         console.log(results);
       });
-    };
+    }
   });
   app.get("/api/userall", function (req, res) {
     db.User.findAll({}).then(function (results) {
