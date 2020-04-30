@@ -28,7 +28,7 @@ $(document).ready(function () {
       //var email = results[i].email;
       var userName = results[i].username;
       var url = results[i].githuburl;
-    
+
 
       //profile card
       var div1 = $("<div>");
@@ -80,7 +80,7 @@ $(document).ready(function () {
       var github = $("<span>");
       github.text("Github: ");
       div4.append(github);
-      
+
       var user = $("<a>");
       user.text(userName);
       user.attr("href", "https://github.com/" + userName);
