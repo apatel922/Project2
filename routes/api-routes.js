@@ -50,16 +50,15 @@ module.exports = function (app) {
     } else {
       // Otherwise send back the user's email and id
       // Sending back a password, even a hashed password, isn't a good idea
-    db.User.findAll({
-      where:{
-        email: req.user.email
-      }
-    }).then(function (results){
-      res.json(results)
-      console.log(results)
-    })
-  
-    }
+      db.User.findAll({
+        where: {
+          email: req.user.email
+        }
+      }).then(function (results) {
+        res.json(results);
+        console.log(results);
+      });
+    };
   });
   app.get("/api/userall", function (req, res) {
     db.User.findAll({}).then(function (results) {
