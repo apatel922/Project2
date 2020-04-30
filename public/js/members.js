@@ -26,7 +26,9 @@ $(document).ready(function () {
       var pic = $("<img>");
       pic.attr("src", "placeholder.jpg");
       //var email = results[i].email;
-      //var userName = results[i].username;
+      var userName = results[i].username;
+      var url = results[i].githuburl;
+    
 
       //profile card
       var div1 = $("<div>");
@@ -46,7 +48,17 @@ $(document).ready(function () {
       pic.attr("id", "img1");
       imgdiv.append(pic);
 
-      //add button
+      var btn = $("<a>");
+      btn.attr("id", "fab");
+      btn.addClass("btn-floating halfway-fab waves-effect waves-light modal-trigger");
+      btn.attr("href", "#m1");
+
+      var icon = $("<i>");
+      icon.addClass("material-icons");
+      icon.text("style");
+      btn.append(icon);
+
+      imgdiv.append(btn);
 
       var div3 = $("<div>");
       div3.addClass("card-content");
@@ -62,10 +74,22 @@ $(document).ready(function () {
       year.addClass("class-year");
       text1.append(year);
 
+      var div4 = $("<div>");
+      div4.addClass("card-action");
+
+      var github = $("<span>");
+      github.text("Github: ");
+      div4.append(github);
+      
+      var user = $("<a>");
+      user.text(userName);
+      user.attr("href", "https://github.com/" + userName);
+      github.append(user);
 
       div2.append(imgdiv);
       div2.append(div3);
       div1.append(div2);
+      div2.append(div4);
       $("#teamCards").append(div1);
 
     }
