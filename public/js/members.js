@@ -3,12 +3,13 @@ $(document).ready(function () {
   // and updates the HTML on the page
 
   //welcome header
-  // $.get("/api/user").then(function (data) {
-  //   $(".member-name").text(data.firstname);
-  //  var name = $("<h2>").text("Welcome, " + results[results.length - 1].firstname);
-  //  $(name).addClass("member-header");
-  //  $("body").append(name);
-  // });
+  // $.get("/api/user_data").then(function (data) {
+  //   console.log(data);
+  //   $(".member-name").text("Welcome, " + data.firstname);
+  // var name = $("<h2>").text("Welcome, " + data.firstname);
+  // $(name).addClass("member-header");
+  // $("body").append(name);
+  //});
 
   function apiCall() {
     $.get("/api/userall", function (results) {
@@ -32,12 +33,12 @@ $(document).ready(function () {
       var div1 = $("<div>");
       div1.addClass("col s12 m6");
       div1.attr("id", "div1");
-      
+
 
       var div2 = $("<div>");
       div2.addClass("card");
       div2.attr("id", "div2");
-      
+
 
       var imgdiv = $("<div>");
       imgdiv.addClass("card-image");
@@ -51,7 +52,7 @@ $(document).ready(function () {
       var div3 = $("<div>");
       div3.addClass("card-content");
       div3.attr("id", "div3");
-      
+
 
       var text1 = $("<span>").text(first + " " + last);
       text1.addClass("card-title");
