@@ -33,12 +33,15 @@ h5 {
   display: block;
   background-color: #dedede;
 }
+h3 {
+  color: rgb(104, 104, 104);
+}
 #jumbotron {
   margin-top: 60px;
   display: block;
   background-color: #f2f2f2;
   border-radius: 5px;
-  height: 320px;
+  height: auto;
 }
 .jumboHeader {
   font-size: 48px;
@@ -50,6 +53,9 @@ h5 {
   padding: 24px;
   font-size: 18px;
   color: #9a9a9a;
+}
+.jumboText {
+  padding-bottom: 24px;
 }
 .modal {
   height: 80%;
