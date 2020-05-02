@@ -1,3 +1,5 @@
+// import { Model } from "sequelize/types";
+
 $(document).ready(function () {
   // This file just does a GET request to figure out which user is logged in
   // and updates the HTML on the page
@@ -9,7 +11,7 @@ $(document).ready(function () {
   // var name = $("<h2>").text("Welcome, " + data.firstname);
   // $(name).addClass("member-header");
   // $("body").append(name);
-  //});
+  // });
 
   function apiCall() {
     $.get("/api/userall", function (results) {
@@ -20,14 +22,14 @@ $(document).ready(function () {
 
   function makeCard(results) {
     for (var i = 0; i < results.length; i++) {
+
       var first = results[i].firstname;
       var last = results[i].lastname;
       var gradYear = results[i].gradyear;
       var pic = $("<img>");
-      pic.attr("src", "placeholder.jpg");
+      pic.attr("src", results[i].profilepic);
       //var email = results[i].email;
       var userName = results[i].username;
-      var url = results[i].githuburl;
 
 
       //profile card
@@ -40,7 +42,6 @@ $(document).ready(function () {
       div2.addClass("card");
       div2.attr("id", "div2");
 
-
       var imgdiv = $("<div>");
       imgdiv.addClass("card-image");
       imgdiv.attr("id", "imgdiv");
@@ -51,7 +52,7 @@ $(document).ready(function () {
       var btn = $("<a>");
       btn.attr("id", "fab");
       btn.addClass("btn-floating halfway-fab waves-effect waves-light modal-trigger");
-      btn.attr("href", "#m1");
+      btn.attr("href", "#m" + i);
 
       var icon = $("<i>");
       icon.addClass("material-icons");
@@ -79,7 +80,9 @@ $(document).ready(function () {
 
       var github = $("<span>");
       github.text("Github: ");
+      github.trigger("_blank");
       div4.append(github);
+
 
       var user = $("<a>");
       user.text(userName);
@@ -92,7 +95,17 @@ $(document).ready(function () {
       div2.append(div4);
       $("#teamCards").append(div1);
 
+      //modal
+      $("#teamCards").on("click", ".btn-floating", function (event) {
+        event.preventDefault();
+        console.log("inside modal");
+
+        var mtext1 = $("#mtext1");
+        mtext1.text(this.first + " " + this.last);
+
+      });
     }
+
   }
   apiCall();
 });
