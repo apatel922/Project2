@@ -39,7 +39,7 @@ h5 {
 }
 .divider {
   display: block;
-  background-color: #dedede;
+  background-color: #dededec6;
 }
 #guest {
   color: #acacac;
@@ -59,8 +59,7 @@ h3 {
 }
 .jumboHeader {
   font-size: 48px;
-  color: #8a8a8aa3;
-  padding-left: 32px;
+  color: #8a8a8a79;
   margin-bottom: -10px;
 }
 .jumboContent {
@@ -70,6 +69,7 @@ h3 {
 .jumboText {
   padding-bottom: 24px;
   font-size: 24px;
+  font-weight: lighter;
 }
 .modal {
   height: 320px;
@@ -116,7 +116,7 @@ nav ul a:hover {
   background-color: #ed7d81;
 }
 .parallax-container {
-  height: 400px;
+  height: 500px;
   background-color: hsla(343, 31%, 0%, 0.25);
 }
 .topRepo {
@@ -129,6 +129,15 @@ nav ul a:hover {
 
 /* 720px Breakpoint */
 @media only screen and (max-width: 720px) {
+  .jumboHeader {
+    font-size: 32px;
+    color: #8a8a8a79;
+    margin-bottom: -8px;
+  }
+  .jumboText {
+    padding-bottom: 18px;
+    font-size: 20px;
+  }
   .modal {
     margin-top: 40%;
     width: 90%;
