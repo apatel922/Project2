@@ -26,6 +26,8 @@ module.exports = function (app) {
           githuburl: searchRes.data.html_url,
           email: req.body.email,
           password: req.body.password,
+          location: searchRes.data.location,
+          public_repos: searchRes.data.public_repos
         })
           .then(function () {
             res.redirect(307, "/api/login");
