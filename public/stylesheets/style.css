@@ -9,10 +9,10 @@ h5 {
   padding-bottom: none;
 }
 .class-year {
-  color: #ababab;
-  font-weight: 500;
+  color: #8e8e8e;
+  padding-left: 8px;
+  font-weight: 100;
   /* float: right; */
-  font-size: 18px;
 }
 .card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating){
   color: #ee6e72bf;
@@ -32,6 +32,9 @@ h5 {
 .divider {
   display: block;
   background-color: #dedede;
+}
+#guest {
+  color: #acacac;
 }
 h3 {
   color: rgb(104, 104, 104);
@@ -112,6 +115,7 @@ nav ul a:hover {
 /* 720px Breakpoint */
 @media only screen and (max-width: 720px) {
   .modal {
+    margin-top: 40%;
     width: 90%;
   }
   nav .brand-logo {
