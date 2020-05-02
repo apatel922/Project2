@@ -26,11 +26,12 @@ $(document).ready(function () {
       var first = results[i].firstname;
       var last = results[i].lastname;
       var gradYear = results[i].gradyear;
+      var userName = results[i].username;
       var pic = $("<img>");
       pic.attr("src", results[i].profilepic);
-      //var email = results[i].email;
-      var userName = results[i].username;
-
+      // var email = results[i].email;
+      // var location = results[i].location;
+      // var repos = results[i].publicRepos;
 
       //profile card
       var div1 = $("<div>");
@@ -40,7 +41,7 @@ $(document).ready(function () {
 
       var div2 = $("<div>");
       div2.addClass("card");
-      div2.attr("id", "div2");
+      div2.attr("id", "card" + i);
 
       var imgdiv = $("<div>");
       imgdiv.addClass("card-image");
@@ -52,7 +53,8 @@ $(document).ready(function () {
       var btn = $("<a>");
       btn.attr("id", "fab");
       btn.addClass("btn-floating halfway-fab waves-effect waves-light modal-trigger");
-      btn.attr("href", "#m" + i);
+      btn.attr("href", "#m1");
+      btn.data("name", first + "" + last).data("github", userName);
 
       var icon = $("<i>");
       icon.addClass("material-icons");
@@ -93,15 +95,16 @@ $(document).ready(function () {
       div2.append(div3);
       div1.append(div2);
       div2.append(div4);
-      $("#teamCards").append(div1);
+      $(".teamCards").append(div1);
 
       //modal
-      $("#teamCards").on("click", ".btn-floating", function (event) {
+      $("#card" + i).on("click", ".btn-floating", function (event) {
         event.preventDefault();
         console.log("inside modal");
+        console.log(this);
 
-        var mtext1 = $("#mtext1")
-        mtext1.text(this.first + " " + this.last);
+        $("#mheader").text($(this).data("name"));
+        $("#mgithub").text("@" + $(this).data("github"));
 
       });
     }
