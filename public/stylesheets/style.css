@@ -3,9 +3,6 @@ form.login {
   margin-top: 50px;
 }
 body {
-  /* background-image: url(../specs.png);
-  background-repeat: no-repeat;
-  background-position: center; */
 }
 .card .card-title,
 h5 {
@@ -25,6 +22,9 @@ h5 {
 .card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating):hover {
   color: #ee6e72;
 }
+.brandColor {
+  color: #ee6e72a3;
+}
 .btn-flat {
   color: #ee6e72;
 }
@@ -36,34 +36,37 @@ h5 {
 }
 .divider {
   display: block;
-  background-color: #dedede;
+  background-color: #dededec6;
 }
 #guest {
   color: #acacac;
+  padding-left: 12px;
 }
 h3 {
   color: rgb(104, 104, 104);
 }
+.italics {
+  font-style: italic;
+}
 #jumbotron {
-  margin-top: 60px;
   display: block;
-  background-color: #f2f2f2f0;
+  /* background-color: #f2f2f2f0; */
   border-radius: 5px;
   height: auto;
 }
 .jumboHeader {
   font-size: 48px;
-  color: #ee6e72a3;
-  padding-left: 32px;
+  color: #8a8a8aa3;
   margin-bottom: -10px;
 }
 .jumboContent {
   padding: 24px;
-  font-size: 18px;
   color: #9a9a9a;
 }
 .jumboText {
   padding-bottom: 24px;
+  font-size: 24px;
+  font-weight: lighter;
 }
 .modal {
   height: 320px;
@@ -109,9 +112,13 @@ nav ul a:hover {
   text-decoration: none;
   background-color: #ed7d81;
 }
-/* #specs {
-  opacity: 25%;
-} */
+p {
+  font-size: 18px;
+}
+.parallax-container {
+  height: 500px;
+  background-color: hsla(343, 31%, 0%, 0.25);
+}
 .topRepo {
   font-size: 18px;
   color: #9a9a9a;
@@ -122,6 +129,14 @@ nav ul a:hover {
 
 /* 720px Breakpoint */
 @media only screen and (max-width: 720px) {
+  .jumboHeader {
+    font-size: 32px;
+    margin-bottom: -8px;
+  }
+  .jumboText {
+    padding-bottom: 18px;
+    font-size: 20px;
+  }
   .modal {
     margin-top: 40%;
     width: 90%;

@@ -16,7 +16,7 @@
   <!-- Navbar -->
   <nav>
     <div class="nav-wrapper">
-      <a href="home.html" class="brand-logo">nerd book</a>
+      <a href="home.html" class="brand-logo">nerd_book</a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">reorder</i></a>
       <ul class="right hide-on-med-and-down">
         <li><a href="login.html">Log In</a></li>
@@ -31,27 +31,59 @@
     <li><a href="signup.html">Sign Up</a></li>
   </ul>
 
-  <div class="container">
-    <div class="row">
-      <!-- Page header -->
 
-      <div class="row">
+      <!-- Parallax -->
+      <div class="parallax-container">
+        <div class="parallax"><img src="assets/team2C.png"></div>
+      </div>
+      <div class="section white">
         <div id="jumbotron" class="col s12 m12">
             <div class="row">
-                <h3 class="jumboHeader">Welcome, <span id="guest">Gwethony</span></h3>
+                <div class="container">
+                    <h3 class="jumboHeader">where <span class="italics">greatness</span> happens</h3>
+                    <!-- <h3 class="jumboHeader">Welcome<span id="guest"></span></h3> -->
+                </div>
+                <div class="divider"></div>
+                <div class="container">
+                    <div class="jumboContent">
+                        <p class="jumboText">
+                            We are a passionate crew here at <span class="italics brandColor">nerd_book</span>.  Our mission is bringing teams together with ingenuity, innovation and imagination.                  
+                        </p>
+                        <p class="jumboText">
+                            We’re hungry for solutions, not problems. We’re humble but confident, and we live life with an extra gear. That’s why we’ve fostered a work environment that promotes creativity, makes room for personal growth, and encourages discussion and active problem-solving.                
+                        </p>
+                        <a href="members.html" class="waves-effect waves-light btn-large">Meet The Team</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+      </div>
+      <div class="parallax-container">
+        <div class="parallax"><img src="assets/team1B.png"></div>
+      </div>
+
+      <div class="section white">
+        <div class="row">
+            <div class="container">
+                <h3 class="jumboHeader">about <span class="italics">us</span></h3>
+                <!-- <h3 class="jumboHeader">Welcome<span id="guest"></span></h3> -->
             </div>
             <div class="divider"></div>
-            <div class="jumboContent">
-                <p class="jumboText">
-                    We are a passionate group, yadda yadda yadda, lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer auctor neque arcu, rutrum mollis velit tristique sit amet. Nullam nibh mauris, facilisis rhoncus convallis sit amet, gravida eu est.
-                </p>
-                <a href="members.html" class="waves-effect waves-light btn-large">Meet The Team!</a>
+            <div class="container">
+                <div id="" class="col s12 m12">
+                    <div class="jumboContent">
+                        <p class="jumboText">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras at elementum ligula, eget laoreet augue. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam facilisis sem suscipit tellus semper, sed auctor massa sodales. Integer vel dui suscipit, pellentesque urna at, aliquam diam. Maecenas lacinia augue id elementum porttitor. Pellentesque at enim non ipsum blandit condimentum. Curabitur dictum eros non posuere aliquet. Vivamus ultrices imperdiet pharetra. Aenean lorem nisl, scelerisque id viverra non, sagittis sed metus. Cras ac quam porta, mollis . 
+                        </p>
+                        <p class="jumboText">
+                            Interdum et malesuada fames ac ante ipsum primis in faucibus. Maecenas et arcu quis lorem porttitor pellentesque. Aenean dictum consectetur augue, a egestas nunc blandit id. Integer vel dui suscipit, pellentesque urna at, aliquam diam. Maecenas lacinia augue id elementum porttitor. Pellentesque at enim non ipsum blandit condimentum. Curabitur dictum eros non posuere aliquet. Vivamus ultrices imperdiet pharetra. Aenean lorem nisl, scelerisque id viverra non, sagittis sed metus. Cras ac quam porta, mollis ante eu, tempor nunc.
+                        </p>
+                    </div>
+                </div> 
             </div>
         </div>
       </div>
-
-    </div>
-  </div>
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -68,6 +100,11 @@
     $(document).ready(function(){
       $('.sidenav').sidenav();
     });
+
+    // Parallax
+    $(document).ready(function(){
+    $('.parallax').parallax();
+  });
   </script>
 
 </body>
