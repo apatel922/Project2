@@ -1,3 +1,5 @@
+// import { Model } from "sequelize/types";
+
 $(document).ready(function () {
   // This file just does a GET request to figure out which user is logged in
   // and updates the HTML on the page
@@ -9,7 +11,7 @@ $(document).ready(function () {
   // var name = $("<h2>").text("Welcome, " + data.firstname);
   // $(name).addClass("member-header");
   // $("body").append(name);
-  //});
+  // });
 
   function apiCall() {
     $.get("/api/userall", function (results) {
@@ -20,6 +22,7 @@ $(document).ready(function () {
 
   function makeCard(results) {
     for (var i = 0; i < results.length; i++) {
+      
       var first = results[i].firstname;
       var last = results[i].lastname;
       var gradYear = results[i].gradyear;
@@ -27,18 +30,18 @@ $(document).ready(function () {
       pic.attr("src", "placeholder.jpg");
       //var email = results[i].email;
       var userName = results[i].username;
-      var url = results[i].githuburl;
 
 
       //profile card
       var div1 = $("<div>");
       div1.addClass("col s12 m6");
       div1.attr("id", "div1");
-
+      
 
       var div2 = $("<div>");
       div2.addClass("card");
       div2.attr("id", "div2");
+      div2.attr("href", "#m" + i)
 
 
       var imgdiv = $("<div>");
@@ -79,7 +82,9 @@ $(document).ready(function () {
 
       var github = $("<span>");
       github.text("Github: ");
+      github.trigger("_blank");
       div4.append(github);
+
 
       var user = $("<a>");
       user.text(userName);
@@ -92,7 +97,16 @@ $(document).ready(function () {
       div2.append(div4);
       $("#teamCards").append(div1);
 
+      $("#teamCards").on("click", ".btn-floating", function (event) {
+        event.preventDefault();
+        console.log("inside modal");
+
+        var mtext1 = $("#mtext1");
+        mtext1.text(this.first + " " + this.last);
+      });
+
     }
+
   }
   apiCall();
 });
