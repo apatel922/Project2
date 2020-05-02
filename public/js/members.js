@@ -29,8 +29,8 @@ $(document).ready(function () {
       var userName = results[i].username;
       var pic = $("<img>");
       pic.attr("src", results[i].profilepic);
-      // var email = results[i].email;
-      // var location = results[i].location;
+      var email = results[i].email;
+      var location = results[i].location;
       // var repos = results[i].publicRepos;
 
       //profile card
@@ -54,7 +54,7 @@ $(document).ready(function () {
       btn.attr("id", "fab");
       btn.addClass("btn-floating halfway-fab waves-effect waves-light modal-trigger");
       btn.attr("href", "#m1");
-      btn.data("name", first + "" + last).data("github", userName);
+      btn.data("name", first + "" + last).data("github", userName).data("email", email).data("location", location);
 
       var icon = $("<i>");
       icon.addClass("material-icons");
@@ -105,6 +105,8 @@ $(document).ready(function () {
 
         $("#mheader").text($(this).data("name"));
         $("#mgithub").text("@" + $(this).data("github"));
+        $("#email").text($(this).data("email"));
+        $("#location").text($(this).data("location"));
 
       });
     }
