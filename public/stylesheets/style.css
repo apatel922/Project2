@@ -45,6 +45,9 @@ h5 {
 h3 {
   color: rgb(104, 104, 104);
 }
+.italics {
+  font-style: italic;
+}
 #jumbotron {
   margin-top: 60px;
   display: block;
