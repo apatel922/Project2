@@ -43,7 +43,7 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: true
     },
-    public_repos: {
+    publicrepos: {
       type: DataTypes.INTEGER,
       allowNull: true
     }
