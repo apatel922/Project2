@@ -22,12 +22,12 @@ $(document).ready(function () {
 
   function makeCard(results) {
     for (var i = 0; i < results.length; i++) {
-      
+
       var first = results[i].firstname;
       var last = results[i].lastname;
       var gradYear = results[i].gradyear;
       var pic = $("<img>");
-      pic.attr("src", "placeholder.jpg");
+      pic.attr("src", results[i].profilepic);
       //var email = results[i].email;
       var userName = results[i].username;
 
@@ -36,13 +36,11 @@ $(document).ready(function () {
       var div1 = $("<div>");
       div1.addClass("col s12 m6");
       div1.attr("id", "div1");
-      
+
 
       var div2 = $("<div>");
       div2.addClass("card");
       div2.attr("id", "div2");
-      div2.attr("href", "#m" + i)
-
 
       var imgdiv = $("<div>");
       imgdiv.addClass("card-image");
@@ -54,7 +52,7 @@ $(document).ready(function () {
       var btn = $("<a>");
       btn.attr("id", "fab");
       btn.addClass("btn-floating halfway-fab waves-effect waves-light modal-trigger");
-      btn.attr("href", "#m1");
+      btn.attr("href", "#m" + i);
 
       var icon = $("<i>");
       icon.addClass("material-icons");
@@ -97,14 +95,15 @@ $(document).ready(function () {
       div2.append(div4);
       $("#teamCards").append(div1);
 
+      //modal
       $("#teamCards").on("click", ".btn-floating", function (event) {
         event.preventDefault();
         console.log("inside modal");
 
         var mtext1 = $("#mtext1")
         mtext1.text(this.first + " " + this.last);
-      });
 
+      });
     }
 
   }
