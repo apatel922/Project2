@@ -33,12 +33,15 @@ h5 {
   display: block;
   background-color: #dedede;
 }
+h3 {
+  color: rgb(104, 104, 104);
+}
 #jumbotron {
   margin-top: 60px;
   display: block;
   background-color: #f2f2f2;
   border-radius: 5px;
-  height: 320px;
+  height: auto;
 }
 .jumboHeader {
   font-size: 48px;
@@ -51,11 +54,19 @@ h5 {
   font-size: 18px;
   color: #9a9a9a;
 }
+.jumboText {
+  padding-bottom: 24px;
+}
 .modal {
-  height: 80%;
+  height: 340px;
   width: 600px;
 }
+.modal-close {
+  color: #b0b0b0;
+}
 .modal-content {
+  border-radius: inherit;
+  border-left: 12px solid #ee6e728e;
   height: 100%;
 }
 .modal-image {
@@ -89,6 +100,12 @@ nav ul a:hover {
   color: #ffe2e3;
   text-decoration: none;
   background-color: #ed7d81;
+}
+.topRepo {
+  font-size: 18px;
+  color: #9a9a9a;
+  padding-top: 24px;
+  padding-bottom: 12px;
 }
 
 
