@@ -58,10 +58,15 @@ h3 {
   padding-bottom: 24px;
 }
 .modal {
-  height: 400px;
+  height: 340px;
   width: 600px;
 }
+.modal-close {
+  color: #b0b0b0;
+}
 .modal-content {
+  border-radius: inherit;
+  border-left: 12px solid #ee6e728e;
   height: 100%;
 }
 .modal-image {
@@ -95,6 +100,12 @@ nav ul a:hover {
   color: #ffe2e3;
   text-decoration: none;
   background-color: #ed7d81;
+}
+.topRepo {
+  font-size: 18px;
+  color: #9a9a9a;
+  padding-top: 24px;
+  padding-bottom: 12px;
 }
 
 
