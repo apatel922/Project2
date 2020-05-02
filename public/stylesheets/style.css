@@ -2,11 +2,16 @@ form.signup,
 form.login {
   margin-top: 50px;
 }
+body {
+  /* background-image: url(../specs.png);
+  background-repeat: no-repeat;
+  background-position: center; */
+}
 .card .card-title,
 h5 {
   color: #ee6e72bf;
   font-weight: 500;
-  padding-bottom: none;
+  /* padding-bottom: 12px; */
 }
 .class-year {
   color: #8e8e8e;
@@ -42,7 +47,7 @@ h3 {
 #jumbotron {
   margin-top: 60px;
   display: block;
-  background-color: #f2f2f2;
+  background-color: #f2f2f2f0;
   border-radius: 5px;
   height: auto;
 }
@@ -61,7 +66,7 @@ h3 {
   padding-bottom: 24px;
 }
 .modal {
-  height: 340px;
+  height: 320px;
   width: 600px;
 }
 .modal-close {
@@ -104,6 +109,9 @@ nav ul a:hover {
   text-decoration: none;
   background-color: #ed7d81;
 }
+/* #specs {
+  opacity: 25%;
+} */
 .topRepo {
   font-size: 18px;
   color: #9a9a9a;
