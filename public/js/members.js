@@ -100,7 +100,7 @@ $(document).ready(function () {
         event.preventDefault();
         console.log("inside modal");
 
-        var mtext1 = $("#mtext1")
+        var mtext1 = $("#mtext1");
         mtext1.text(this.first + " " + this.last);
 
       });
