@@ -3,9 +3,6 @@ form.login {
   margin-top: 50px;
 }
 body {
-  /* background-image: url(../specs.png);
-  background-repeat: no-repeat;
-  background-position: center; */
 }
 .card .card-title,
 h5 {
@@ -59,7 +56,7 @@ h3 {
 }
 .jumboHeader {
   font-size: 48px;
-  color: #8a8a8a79;
+  color: #8a8a8aa3;
   margin-bottom: -10px;
 }
 .jumboContent {
@@ -115,6 +112,9 @@ nav ul a:hover {
   text-decoration: none;
   background-color: #ed7d81;
 }
+p {
+  font-size: 18px;
+}
 .parallax-container {
   height: 500px;
   background-color: hsla(343, 31%, 0%, 0.25);
@@ -131,7 +131,6 @@ nav ul a:hover {
 @media only screen and (max-width: 720px) {
   .jumboHeader {
     font-size: 32px;
-    color: #8a8a8a79;
     margin-bottom: -8px;
   }
   .jumboText {
