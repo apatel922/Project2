@@ -108,6 +108,13 @@ nav .brand-logo:active {
   text-decoration: none;
   background-color: #ed7d81;
 }
+nav .sidenav-trigger {
+  transform: rotate(180deg);
+}
+nav .sidenav-trigger:hover {
+  text-decoration: none;
+  color: #eed0d1;
+}
 nav ul a {
   color: #ffe2e3;
 }
@@ -123,6 +130,13 @@ p {
   height: 500px;
   background-color: hsla(343, 31%, 0%, 0.25);
 }
+/* .specs {
+  height: 500px;
+  margin-top: 30px;
+  margin-left: -360px;
+  opacity: 0.1;
+  z-index: -1;
+} */
 .topRepo {
   font-size: 18px;
   color: #9a9a9a;
