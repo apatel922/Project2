@@ -4,6 +4,10 @@ form.login {
 }
 body {
 }
+.btn {
+  font-weight: 500;
+  padding: 24px;
+}
 .card .card-title,
 h5 {
   color: #ee6e72bf;
@@ -145,7 +149,4 @@ p {
     padding-left: none;
     padding-right: none;
   }
-  /* .hideAtBreak {
-    visibility: hidden;
-  } */
 }
