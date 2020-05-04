@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link href="stylesheets/style.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 </head>
 
 <body>
@@ -30,7 +31,7 @@
 
   <div class="container">
     <div class="row">
-      <form class="col s8">
+      <form id="theForm"class="col s8">
         <div class="row">
           <h3>Sign Up</h3>
           <p>Already a member? Login <a href="./login.html">here</a></p>
@@ -45,8 +46,9 @@
         </div>
         <div class="row">
           <div class="input-field col s12">
-            <input id="grad-year" type="text" class="validate">
+            <input id="grad-year" type="text" class="validate" data-parsley-type="integer" data-parsley-length="[4, 4]">
             <label for="grad-year">Graduation Year</label>
+            <div id="error2" style="color: red;"></div>
           </div>
         </div>
         <div class="row">
@@ -57,14 +59,16 @@
         </div>
         <div class="row">
           <div class="input-field col s12">
-            <input id="email-input" type="email" class="validate">
+            <input id="email-input" type="email" class="validate" data-parsley-type="email">
             <label for="email">Email</label>
+            <div id="error1" style="color: red;"></div>
           </div>
         </div>
         <div class="row">
           <div class="input-field col s12">
-            <input id="password-input" type="password" class="validate">
+            <input id="password-input" type="password" class="validate " data-parsley-minlength="5" >
             <label for="password">Password</label>
+            <div id="error" style="color: red;"></div>
           </div>
         </div>
         <button class="btn-large waves-effect waves-light" type="submit" name="action" id="signup">Submit</button>
@@ -108,14 +112,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.9.2/parsley.min.js"></script>
   <script type="text/javascript" src="js/signup.js"></script>
 
-  <script>
-    // Sidenav
-    $(document).ready(function(){
-      $('.sidenav').sidenav();
-    });
-  </script>
   
 </body>
 
