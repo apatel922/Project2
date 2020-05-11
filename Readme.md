@@ -21,3 +21,6 @@ Users can input their username (so we can do an api call to get their data), bio
 This information is stored in mysql and posted to the home page.
 We will end up having a list of all the students in this coding camp and a way to access their githubs from one location. 
 
+## Deployed Application
+https://blooming-meadow-40922.herokuapp.com/home.html
+
