@@ -8,6 +8,14 @@ var env       = process.env.NODE_ENV || 'development';
 var config    = require(__dirname + '/../config/config.json')[env];
 var db        = {};
 
+var compression = require('compression')
+var express = require('express')
+ 
+var app = express()
+ 
+// compress all responses
+app.use(compression())
+
 if (config.use_env_variable) {
   var sequelize = new Sequelize(process.env[config.use_env_variable]);
 } else {

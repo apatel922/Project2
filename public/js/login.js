@@ -4,6 +4,14 @@ $(document).ready(function () {
   var emailInput = $("input#email-input");
   var passwordInput = $("input#password-input");
 
+  var compression = require("compression");
+  var express = require("express");
+
+  var app = express();
+
+  // compress all responses
+  app.use(compression());
+
   function loginUser(email, password) {
     console.log("Login User Call");
 

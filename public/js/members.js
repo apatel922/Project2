@@ -13,6 +13,14 @@ $(document).ready(function () {
   // $("body").append(name);
   // });
 
+  var compression = require("compression");
+  var express = require("express");
+
+  var app = express();
+
+  // compress all responses
+  app.use(compression());
+
   function apiCall() {
     $.get("/api/userall", function (results) {
       console.log(results);
